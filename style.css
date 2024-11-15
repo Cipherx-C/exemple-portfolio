@@ -42,68 +42,345 @@ a {
 }
 
 .navegacao__lista {
-    display: none;
+    display: flex; /* ou block, dependendo da estrutura */
+   
+    gap: 1rem;
 }
+
 
 .navegacao__elemento a {
     font-size: 0.9rem;
 }
 /* ------------------------------ Seção Apresentação ------------------------------*/
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+}
 
+.apresentacao__foto {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao__conteiner {
+    max-width: 600px;
+    text-align: center;
+}
+
+.apresentacao__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.apresentacao__subtitulo {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes__elemento {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*------------------------------ Seção Formação Acadêmica ------------------------------*/
+.formacao {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.formacao__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.formacao__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.formacao__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formacao__item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.formacao__instituicao {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.formacao__curso {
+    font-size: 1rem;
+    color: #555;
+}
+
+.formacao__periodo {
+    font-size: 0.9rem;
+    color: #777;
+}
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
+.sobre-mim {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    text-align: center;
+}
 
+.sobre-mim__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
 
+.sobre-mim__texto {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.sobre-mim__assinatura {
+    max-width: 100px;
+    margin-top: 1rem;
+}
 /*------------------------------ Seção de Habilidades ------------------------------*/
+.habilidades {
+    display: flex;
+    flex-direction: column;  /* Organiza o conteúdo de cima para baixo */
+    align-items: center;     /* Centraliza o conteúdo no eixo horizontal */
+    gap: 2rem;               /* Espaçamento entre o título e a lista */
+    padding: 2rem;
+}
+
+.habilidades__titulo {
+    font-size: 1.8rem;       /* Tamanho do título */
+    font-weight: bold;       /* Deixa o título em negrito */
+    color: #333;             /* Cor do título */
+    text-align: center;      /* Alinha o título ao centro */
+}
+
+.habilidades__lista {
+    display: flex;
+    flex-direction: row;     /* Alinha os itens na horizontal */
+    flex-wrap: wrap;         /* Permite que os itens passem para a linha seguinte */
+    gap: 2rem;               /* Espaçamento entre os itens */
+    list-style: none;        /* Remove os marcadores da lista */
+    padding: 0;              /* Remove o padding da lista */
+    margin: 0;               /* Remove a margem da lista */
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;  /* Coloca o ícone acima do nome */
+    align-items: center;     /* Alinha o conteúdo no centro */
+    gap: 0.5rem;             /* Espaço entre o ícone e o nome */
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 120px;            /* Largura fixa para os itens */
+}
+
+.habilidades__elemento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.habilidades__icone {
+    max-width: 70px;         /* Tamanho máximo do ícone */
+    max-height: 70px;        /* Tamanho máximo do ícone */
+    border-radius: 10px;     /* Bordas arredondadas para o ícone */
+}
+
+.habilidades__nome {
+    font-size: 0.9rem;       /* Tamanho do texto */
+    text-align: center;      /* Alinha o texto ao centro */
+    color: #333;             /* Cor do texto */
+}
 
 
 /*------------------------------ Seção de Hobbies --------------------------------*/
+.hobbies {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
 
+.hobbies__titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
 
+.hobbies__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hobbies__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    gap: 0.5rem;
+}
+
+.hobbies__icone {
+    max-width: 60px;
+    border-radius: 10px;
+}
+
+.hobbies__nome {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #333;
+}
 /*------------------------------ Seção de Projetos --------------------------------*/
+.projetos {
+    padding: 2rem;
+    background-color: #ffffff;
+}
 
+.projetos__titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
 
+.projetos__conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.projetos__nome {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.projetos__descricao {
+    font-size: 1rem;
+    color: #555;
+}
 /*------------------------------ Seção de Contato ---------------------------------*/
+.contato {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contato__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato__campo {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contato__campo--textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contato__botao {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
 
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
 @media (min-width: 768px) {
-    .cabecalho {
+    .habilidades__elemento {
+        width: 140px;
+    }
+
+    .formacao__item {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        gap: 1.5rem;
     }
 
-    .cabecalho__logo {
-        max-width: 100px;
-    }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
-    .navegacao__elemento a {
-        font-size: 1rem;
+    .formacao__instituicao {
+        text-align: left;
     }
 }
 
 /* Telas grandes */
 @media (min-width: 1024px) {
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
+    .habilidades__elemento {
+        width: 160px;
     }
 
-    .navegacao__elemento a {
-        font-size: 1.1rem;
+    .formacao__item {
+        gap: 2rem;
+    }
+
+    .formacao__titulo,
+    .habilidades__titulo {
+        font-size: 2rem;
     }
 }
+
